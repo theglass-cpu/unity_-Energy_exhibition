@@ -22,7 +22,7 @@ public class ObjectClick : MonoBehaviour
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(point.position);
 
-            if (Physics.Raycast(ray, out hit, 100.0f))
+            if (Physics.Raycast(ray, out hit, 1000.0f))
             {
                 if (hit.transform != null)
                 {
