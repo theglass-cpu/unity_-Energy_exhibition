@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CamRotate : MonoBehaviour
 {
-    public float rotSpeed = 200f;
+    public float rotSpeed = 400f;
 
     float mx = 0;
     float my = 0;
@@ -14,6 +14,7 @@ public class CamRotate : MonoBehaviour
     
     void Start()
     {
+        Cursor.visible = false; //마우스 커서 숨기기
         
     }
 
