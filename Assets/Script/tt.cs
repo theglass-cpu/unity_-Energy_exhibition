@@ -9,21 +9,15 @@ public class tt : MonoBehaviour
     //public Transform cube;
 
     // Start is called before the first frame update
-    void Start()
-    {
-       // sr = go.GetComponent<SpriteRenderer>();
-        //capsuleColor = gameObject.GetComponent<Renderer>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    
 
     public void aa ()
         {
         sr = go.GetComponent<Renderer>();
+        //if (objName == "water_power") { }
         sr.material.color = Color.green;
+
+
         }
+
 }
