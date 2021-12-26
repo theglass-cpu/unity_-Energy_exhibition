@@ -27,6 +27,10 @@ public class ObjectClick : MonoBehaviour
                 if (hit.transform != null)
                 {
                     PrintName(hit.transform.gameObject);
+                    string a = hit.transform.name;
+                    GameObject.Find(a).GetComponent<tt>().aa();
+                    //GameObject.FindWithTag("tt").SendMessage("aa");
+                   
 
                 }
             }
