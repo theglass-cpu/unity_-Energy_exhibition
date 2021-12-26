@@ -11,16 +11,19 @@ public class CamRotate : MonoBehaviour
     // Start is called before the first frame update
     
 
-    
+
     void Start()
     {
-        Cursor.visible = false; //마우스 커서 숨기기
         
     }
 
     // Update is called once per frame
     void Update()
     {
+       // Cursor.visible = false; //마우스 커서 숨기기
+        Cursor.lockState = CursorLockMode.Locked;   // 마우스를 게임 중앙 좌표에 고정시키고 마우스커서가 안보임
+
+
         float mouse_X = Input.GetAxis("Mouse X");
         float mouse_Y = Input.GetAxis("Mouse Y");
 
