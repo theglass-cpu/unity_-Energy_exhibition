@@ -1393,7 +1393,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 454086198}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 179.7, y: 0, z: 243.1}
+  m_LocalPosition: {x: 189.4, y: 0, z: 243.1}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 1700885652}
@@ -2184,8 +2184,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 662414817}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 205.6, y: -5.7, z: 245.1}
-  m_LocalScale: {x: 60, y: 16.874699, z: 3}
+  m_LocalPosition: {x: 223.3, y: -10.1, z: 245.1}
+  m_LocalScale: {x: 79.05231, y: 33.744335, z: 3}
   m_Children: []
   m_Father: {fileID: 1700885652}
   m_RootOrder: 0
@@ -3958,7 +3958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clickObject: {fileID: 1350011595}
-  board: {fileID: 0}
+  board: {fileID: 662414817}
   country: {fileID: 454086198}
   content: {fileID: 1526167366}
 --- !u!1 &1353344254
@@ -4765,8 +4765,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickObject: {fileID: 1499261331}
   board: {fileID: 0}
-  country: {fileID: 0}
-  content: {fileID: 0}
+  country: {fileID: 454086198}
+  content: {fileID: 1526167366}
 --- !u!1 &1525453439
 GameObject:
   m_ObjectHideFlags: 0
@@ -4986,7 +4986,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526167366}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 179.70001, y: -6.1, z: 243.1}
+  m_LocalPosition: {x: 189.40001, y: -6.1, z: 243.1}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 1700885652}
@@ -5000,9 +5000,8 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526167366}
-  m_Text: "- 2.13 : \uC911\uBD80 \uB208\uC0AC\uD0DC, 21\uBA85 \uC0AC\uB9DD, 7\uBA85
-    \uC2E4\uC885, 10\uBA85 \uBD80\uC0C1\n- 8.25 ~ 27 : \uD64D\uC218 100\uC5EC\uBA85
-    \uC0AC\uB9DD, 100\uC5EC\uBA85 \uBD80\uC0C1"
+  m_Text: "- 1.17 ~ 18 : \uB3D9\uBD80 \uB208 \uD3ED, \uC801\uC124\uB7C9 \uCD5C\uB300
+    75cm, \uCD5C\uB300\uD48D\uC18D 150km/h"
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
