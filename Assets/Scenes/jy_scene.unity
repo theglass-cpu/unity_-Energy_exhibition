@@ -3958,6 +3958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clickObject: {fileID: 1350011595}
+  board: {fileID: 0}
   country: {fileID: 454086198}
   content: {fileID: 1526167366}
 --- !u!1 &1353344254
@@ -4763,6 +4764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clickObject: {fileID: 1499261331}
+  board: {fileID: 0}
   country: {fileID: 0}
   content: {fileID: 0}
 --- !u!1 &1525453439
@@ -5068,6 +5070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clickObject: {fileID: 0}
+  board: {fileID: 0}
   country: {fileID: 0}
   content: {fileID: 0}
 --- !u!1 &1583002941
