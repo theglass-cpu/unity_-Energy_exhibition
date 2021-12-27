@@ -13,11 +13,14 @@ public class tt : MonoBehaviour
 
     public void aa ()
         {
+
+
         sr = go.GetComponent<Renderer>();
-        //if (objName == "water_power") { }
+
         sr.material.color = Color.green;
 
 
-        }
+
+    }
 
 }
