@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,8 +29,15 @@ public class ObjectClick : MonoBehaviour
                 {
                     PrintName(hit.transform.gameObject);
                     string a = hit.transform.name;
+                    try
+                    {
+                        GameObject.Find(a).GetComponent<ClickListener>().btnClick();
 
-                    GameObject.Find(a).GetComponent<ClickListener>().btnClick();
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
 
 
                     //GameObject.Find(a).GetComponent<Jy_click>().btnClick();
