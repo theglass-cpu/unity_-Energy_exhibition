@@ -29,15 +29,14 @@ public class ClickListener : MonoBehaviour
         {
             country.GetComponent<TextMesh>().text = "캐나다";
             content.GetComponent<TextMesh>().text = "- 1.17 ~ 18 : 동부 눈 폭, 적설량 최대 75cm, 최대풍속 150km/h";
-            sr.material.color = Color.green;
         } else if (objectName.Equals("btn2"))
         {
             country.GetComponent<TextMesh>().text = "중미/대서양";
             content.GetComponent<TextMesh>().text = "- 11.3 ~ 6 : 최대풍속 225km/h, 허리케인 '에타', 홍수와 산사, 최소 130여명 사망\n";
-            sr.material.color = Color.green;
-        } else
+        } else if (objectName.Equals("btn3"))
         {
-
+            country.GetComponent<TextMesh>().text = "중미/대서양";
+            content.GetComponent<TextMesh>().text = "- 11.3 ~ 6 : 최대풍속 225km/h, 허리케인 '에타', 홍수와 산사, 최소 130여명 사망\n";
         }
     }
 }
