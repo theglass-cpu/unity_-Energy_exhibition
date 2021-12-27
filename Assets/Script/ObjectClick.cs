@@ -29,11 +29,15 @@ public class ObjectClick : MonoBehaviour
                     PrintName(hit.transform.gameObject);
                     string a = hit.transform.name;
 
+                    GameObject.Find(a).GetComponent<ClickListener>().btnClick();
 
-                    GameObject.Find(a).GetComponent<tt>().aa();
+
+                    //GameObject.Find(a).GetComponent<Jy_click>().btnClick();
+
+                    //GameObject.Find(a).GetComponent<tt>().aa();
 
                     //GameObject.FindWithTag("tt").SendMessage("aa");
-                   
+
 
                 }
             }
