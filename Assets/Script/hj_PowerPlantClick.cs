@@ -7,7 +7,7 @@ public class hj_PowerPlantClick : MonoBehaviour
     public GameObject PowerPlant;
 
 
-    public void clickButton (string obj_name){
+    public void clickPowerPlantButton (string obj_name){
         switch (obj_name)
         {
             case "renewable_btn":
@@ -31,8 +31,26 @@ public class hj_PowerPlantClick : MonoBehaviour
     {
         GameObject.FindWithTag("coal").SetActive(false);
         GameObject.FindWithTag("nuclear").SetActive(false);
+        GameObject.Find("hj_World'sGreenNewDeal").transform.Find("Eu").gameObject.SetActive(false);
     }
 
+    public void ClickGreenNewDealBtn(string obj_name)
+    {
+        Debug.Log("!");
+        switch (obj_name)
+        {
+            case "hj_america_btn":
+                Debug.Log("1");
+                GameObject.Find("hj_World'sGreenNewDeal").transform.Find("America").gameObject.SetActive(true);
+                GameObject.Find("hj_World'sGreenNewDeal").transform.Find("Eu").gameObject.SetActive(false);
+                break;
+            case "hj_eu_btn":
+                Debug.Log("2");
+                GameObject.Find("hj_World'sGreenNewDeal").transform.Find("Eu").gameObject.SetActive(true);
+                GameObject.Find("hj_World'sGreenNewDeal").transform.Find("America").gameObject.SetActive(false);
+                break;
 
+        }
+    }
 
 }

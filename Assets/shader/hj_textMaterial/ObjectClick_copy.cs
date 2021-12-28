@@ -32,9 +32,12 @@ public class ObjectClick_copy : MonoBehaviour
                     {
                         if (a == "renewable_btn" || a == "coal_btn" || a == "nuclear_btn")
                         {
-                            GameObject.Find(a).GetComponent<hj_PowerPlantClick>().clickButton(a);
+                            GameObject.Find(a).GetComponent<hj_PowerPlantClick>().clickPowerPlantButton(a);
+                        }else if (a== "hj_america_btn" || a == "hj_eu_btn")
+                        {
+                            GameObject.Find(a).GetComponent<hj_PowerPlantClick>().ClickGreenNewDealBtn(a);
                         }
-                        GameObject.Find(a).GetComponent<ClickListener>().btnClick();
+
 
                     }
                     catch (Exception ex)
