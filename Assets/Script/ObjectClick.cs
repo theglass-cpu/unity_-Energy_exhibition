@@ -29,6 +29,7 @@ public class ObjectClick : MonoBehaviour
                 {
                     PrintName(hit.transform.gameObject);
                     string a = hit.transform.name;
+
                     try
                     {
                         GameObject.Find(a).GetComponent<ClickListener>().btnClick();
@@ -38,9 +39,6 @@ public class ObjectClick : MonoBehaviour
                     {
 
                     }
-
-
-                    //GameObject.Find(a).GetComponent<Jy_click>().btnClick();
 
                     //GameObject.Find(a).GetComponent<tt>().aa();
 
