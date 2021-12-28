@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ClickListener : MonoBehaviour
+public class jy_ClickListener : MonoBehaviour
 {
 
     Renderer sr;
@@ -17,6 +17,7 @@ public class ClickListener : MonoBehaviour
     // 온실가스에 사용
     //public GameObject arros_before, arrow_safe, arrow_10ago, arrow_dangerous;
     public GameObject arrow;
+    bool before, ago10, safe, dangerous = false;
 
 
     public void btnClick()
@@ -30,23 +31,26 @@ public class ClickListener : MonoBehaviour
 
 
         board = GameObject.Find("explain_board");
-        
-        if(objectName.Equals("jy_btn1"))
+
+        if (objectName.Equals("jy_btn1"))
         {
             country.GetComponent<TextMesh>().text = "캐나다";
             content.GetComponent<TextMesh>().text = "- 1.17 ~ 18 : 동부 눈 폭, 적설량 최대 75cm, 최대풍속 150km/h";
-        } else if (objectName.Equals("jy_btn2"))
+        }
+        else if (objectName.Equals("jy_btn2"))
         {
             country.GetComponent<TextMesh>().text = "미국";
             content.GetComponent<TextMesh>().text =
                 "- 1.11 ~ 12 : 남부 겨울 폭풍, 최대풍속 130km/h, 11명 사망\n" +
                 "- 2.16 : 홍수, 펄강 수위 11.75m (역대 3위로 높은 기록)\n" +
                 "- 7 ~ 8월 캘리포니아 산불 620000ha 소실, 최소 7명 사망";
-        } else if (objectName.Equals("jy_btn3"))
+        }
+        else if (objectName.Equals("jy_btn3"))
         {
             country.GetComponent<TextMesh>().text = "중미/대서양";
             content.GetComponent<TextMesh>().text = "- 11.3 ~ 6 : 최대풍속 225km/h, 허리케인 '에타', 홍수와 산사,\n최소 130여명 사망";
-        } else if (objectName.Equals("jy_btn4"))
+        }
+        else if (objectName.Equals("jy_btn4"))
         {
             country.GetComponent<TextMesh>().text = "브라질";
             content.GetComponent<TextMesh>().text =
@@ -151,21 +155,58 @@ public class ClickListener : MonoBehaviour
             content.GetComponent<TextMesh>().text =
                 "- 12.31 ~ 1.4 : 폭우, 60명 사망, 이재민 3만여 명 발생,\n" +
                 "- 10.22 : 수마트라섬, 폭우로 인한 산사태, 11명 사망\n";
-        } else if (objectName.Equals("jy_btn_before"))
+        }
+        else if (objectName.Equals("jy_btn_before"))
         {
-
+            if(before)
+            {
+                arrow.SetActive(false);
+                before = false;
+            } else
+            {
+                arrow.SetActive(true);
+                before = true;
+            }
+            
         }
         else if (objectName.Equals("jy_btn_safe"))
         {
-
+            if (safe)
+            {
+                arrow.SetActive(false);
+                safe = false;
+            } else
+            {
+                arrow.SetActive(true);
+                safe = true;
+            }
+            
         }
         else if (objectName.Equals("jy_btn_10ago"))
         {
-
+            if (ago10)
+            {
+                arrow.SetActive(false);
+                ago10 = false;
+            } else
+            {
+                arrow.SetActive(true);
+                ago10 = true;
+            }
+                   
         }
         else if (objectName.Equals("jy_btn_dangerous"))
         {
-
+            if(dangerous)
+            {
+                arrow.SetActive(false);
+                dangerous = false;
+            } else
+            {
+                arrow.SetActive(true);
+                dangerous = true;
+            }
+            
         }
     }
 }
