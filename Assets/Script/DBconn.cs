@@ -25,9 +25,7 @@ public class DBconn : MonoBehaviour
    
     IEnumerator LoginToDB( string query)
     {
-        print("db시작");
-
-        Debug.Log("db시작");
+      
 
         WWWForm form = new WWWForm();
         form.AddField("query", query);
@@ -38,24 +36,6 @@ public class DBconn : MonoBehaviour
         Debug.Log(www.text);
         print(www.text);
 
-        /*using (UnityWebRequest www = UnityWebRequest.Post(LoginURL, form))
-        {
-            yield return www.SendWebRequest();
-
-            
-            if (www.isNetworkError || www.isHttpError)
-            {
-                Debug.Log(www.error);
-
-            }
-            else {
-                Debug.Log(www.downloadHandler.text);
-            }
-
-    }*/
-
-        Debug.Log("끝");
-        print("끝");
 
 
     }
