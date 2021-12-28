@@ -29,10 +29,45 @@ public class ObjectClick : MonoBehaviour
                 {
                     PrintName(hit.transform.gameObject);
                     string a = hit.transform.name;
+<<<<<<< HEAD
 
+=======
+                    print("πª √∆¡ˆ ∏ﬁº≠µÂ" + a);
+                    Debug.Log("πªƒß?"+a);
+                    string[] obj_name = a.Split('_');
+>>>>>>> a8c8100bd5fc825633d4170ac029cbb566493f5a
                     try
-                    {
-                        GameObject.Find(a).GetComponent<ClickListener>().btnClick();
+                        {
+                        switch (obj_name[0]) {
+                            case "yr":
+                                Debug.Log("¡§¿Ø∏Æ√∆¿Ω" );
+                                GameObject.Find(a).GetComponent<yr_ClickListener>().btn_Click();
+                                break;
+
+                            case "sh":
+                                Debug.Log("ªÛ»∆√∆¿Ω");
+                                break;
+
+
+                            case "hj":
+                                Debug.Log("»£¿Á√∆¿Ω");
+                                break;
+
+                            case "jy":
+                                Debug.Log("¡ˆø¨√∆¿Ω");
+                                GameObject.Find(a).GetComponent<ClickListener>().btnClick();
+                                break;
+
+                        }
+
+                        /*  //¡§¿Ø∏Æ
+                          GameObject.Find(a).GetComponent<yr_ClickListener>().btn_Click();
+                          //¿Ã¡ˆø¨
+                          GameObject.Find(a).GetComponent<ClickListener>().btnClick();
+                         */
+
+
+
 
                     }
                     catch (Exception ex)
@@ -52,6 +87,6 @@ public class ObjectClick : MonoBehaviour
     }
     private void PrintName(GameObject go)
     {
-        print(go.name);
+        print("PrintName ∏ﬁº≠µÂ" + go.name);
     }
 }
