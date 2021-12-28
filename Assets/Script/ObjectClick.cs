@@ -12,7 +12,7 @@ public class ObjectClick : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -29,36 +29,37 @@ public class ObjectClick : MonoBehaviour
                 {
                     PrintName(hit.transform.gameObject);
                     string a = hit.transform.name;
-                    print("¹» ÃÆÁö ¸Þ¼­µå" + a);
-                    Debug.Log("¹»Ä§?"+a);
+                    // print("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½" + a);
+                    // Debug.Log("ï¿½ï¿½Ä§?"+a);
                     string[] obj_name = a.Split('_');
                     try
+                    {
+                        switch (obj_name[0])
                         {
-                        switch (obj_name[0]) {
                             case "yr":
-                                Debug.Log("Á¤À¯¸®ÃÆÀ½" );
+                                // Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" );
                                 GameObject.Find(a).GetComponent<yr_ClickListener>().btn_Click();
                                 break;
 
                             case "sh":
-                                Debug.Log("»óÈÆÃÆÀ½");
+                                // Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
                                 break;
 
 
                             case "hj":
-                                Debug.Log("È£ÀçÃÆÀ½");
+                                // Debug.Log("È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
                                 break;
 
                             case "jy":
-                                Debug.Log("Áö¿¬ÃÆÀ½");
-                                GameObject.Find(a).GetComponent<ClickListener>().btnClick();
+                                // Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+                                GameObject.Find(a).GetComponent<jy_ClickListener>().btnClick();
                                 break;
 
                         }
 
-                        /*  //Á¤À¯¸®
+                        /*  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                           GameObject.Find(a).GetComponent<yr_ClickListener>().btn_Click();
-                          //ÀÌÁö¿¬
+                          //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                           GameObject.Find(a).GetComponent<ClickListener>().btnClick();
                          */
 
@@ -71,9 +72,6 @@ public class ObjectClick : MonoBehaviour
 
                     }
 
-
-                    //GameObject.Find(a).GetComponent<Jy_click>().btnClick();
-
                     //GameObject.Find(a).GetComponent<tt>().aa();
 
                     //GameObject.FindWithTag("tt").SendMessage("aa");
@@ -82,10 +80,10 @@ public class ObjectClick : MonoBehaviour
                 }
             }
         }
-     
+
     }
     private void PrintName(GameObject go)
     {
-        print("PrintName ¸Þ¼­µå" + go.name);
+        //print("PrintName ï¿½Þ¼ï¿½ï¿½ï¿½" + go.name);
     }
 }
