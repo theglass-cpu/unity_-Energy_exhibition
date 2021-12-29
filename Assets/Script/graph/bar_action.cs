@@ -50,11 +50,6 @@ public class bar_action : MonoBehaviour
         //array에 값 넣어주기
         
 
-
-
-
-
-
     }
 
     // Update is called once per frame
@@ -87,43 +82,87 @@ public class bar_action : MonoBehaviour
         Chart1_bar1.transform.localPosition = new Vector3(x, y, z);
 
         Chart1_bar1_text.transform.localPosition = new Vector3(x, y_text, z);
+        if (array[0] == 0)
+        {
+            x = (x + (array[0] / 2)) + (array[1] / 2);
+            Chart1_bar1_text.SetActive(false);
+        }
+        else
+        {
+            x = (x + (array[0] / 2)) + (array[1] / 2) + 1;
+        }
 
-        x = (x + (array[0] / 2)) + (array[1] / 2) + 1;
         print("x:" + x);
 
         Chart1_bar2.transform.localScale = new Vector3(array[1], 5, 1);
         Chart1_bar2.transform.localPosition = new Vector3(x, y, z);
         Chart1_bar2_text.transform.localPosition = new Vector3(x, y_text, z);
+        if (array[1] == 0)
+        {
+            Chart1_bar2_text.SetActive(false);
+            x = (x + (array[1] / 2)) + (array[2] / 2);
+        }
+        else {
+            x = (x + (array[1] / 2)) + (array[2] / 2) + 1;
+        }
 
-        x = (x + (array[1] / 2)) + (array[2] / 2) + 1;
         print("x:" + x);
 
         Chart1_bar3.transform.localScale = new Vector3(array[2], 5, 1);
         Chart1_bar3.transform.localPosition = new Vector3(x, y, z);
         Chart1_bar3_text.transform.localPosition = new Vector3(x, y_text, z);
+        if (array[2] == 0)
+        {
+            Chart1_bar3_text.SetActive(false);
+            x = (x + (array[2] / 2)) + (array[3] / 2);
+        }
+        else
+        {
+            x = (x + (array[2] / 2)) + (array[3] / 2) + 1;
+        }
 
-        x = (x + (array[2] / 2)) + (array[3] / 2) + 1;
         print("x:" + x);
 
         Chart1_bar4.transform.localScale = new Vector3(array[3], 5, 1);
         Chart1_bar4.transform.localPosition = new Vector3(x, y, z);
         Chart1_bar4_text.transform.localPosition = new Vector3(x, y_text, z);
-
-        x = (x + (array[3] / 2)) + (array[4] / 2) + 1;
+        if (array[3] == 0)
+        {
+            Chart1_bar4_text.SetActive(false);
+            x = (x + (array[3] / 2)) + (array[4] / 2);
+        }
+        else {
+            x = (x + (array[3] / 2)) + (array[4] / 2) + 1;
+        }
+        
         print("x:" + x);
 
         Chart1_bar5.transform.localScale = new Vector3(array[4], 5, 1);
         Chart1_bar5.transform.localPosition = new Vector3(x, y, z);
         Chart1_bar5_text.transform.localPosition = new Vector3(x, y_text, z);
 
+        if (array[4] == 0)
+        {
+            Chart1_bar5_text.SetActive(false);
+            x = (x + (array[4] / 2)) + (array[5] / 2);
+        }
+        else
+        {
+            x = (x + (array[4] / 2)) + (array[5] / 2) + 1;
+        }
 
-        x = (x + (array[4] / 2)) + (array[5] / 2) + 1;
+
+        
         print("x:" + x);
 
         Chart1_bar6.transform.localScale = new Vector3(array[5], 5, 1);
         Chart1_bar6.transform.localPosition = new Vector3(x, y, z);
         Chart1_bar6_text.transform.localPosition = new Vector3(x, y_text, z);
-        
+
+        if (array[5] == 0)
+        {
+            Chart1_bar6_text.SetActive(false);
+        }
     }
     IEnumerator ToDB()
     {

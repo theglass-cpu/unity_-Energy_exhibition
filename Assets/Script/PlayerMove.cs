@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
 
-    public float moveSpeed = 300f;//이동속도 변수
+    public float moveSpeed = 200f;//이동속도 변수
 
     public float jumpPower = 10f;
 
