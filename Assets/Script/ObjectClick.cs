@@ -12,6 +12,7 @@ public class ObjectClick : MonoBehaviour
 
     void Start()
     {
+        GameObject.Find("renewable_btn").GetComponent<hj_PowerPlantClick>().InitPowerPlant();//hojae
 
     }
 
@@ -48,6 +49,14 @@ public class ObjectClick : MonoBehaviour
 
                             case "hj":
                                 // Debug.Log("ȣ������");
+                                if (a == "hj_renewable_btn" || a == "hj_coal_btn" || a == "hj_nuclear_btn")
+                                {
+                                    GameObject.Find(a).GetComponent<hj_PowerPlantClick>().clickPowerPlantButton(a);
+                                }
+                                else if (a == "hj_america_btn" || a == "hj_eu_btn")
+                                {
+                                    GameObject.Find(a).GetComponent<hj_PowerPlantClick>().ClickGreenNewDealBtn(a);
+                                }
                                 break;
 
                             case "jy":
