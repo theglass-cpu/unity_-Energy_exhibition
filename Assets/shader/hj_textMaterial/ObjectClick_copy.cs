@@ -13,7 +13,7 @@ public class ObjectClick_copy : MonoBehaviour
 
     void Start()
     {
-        GameObject.Find("renewable_btn").GetComponent<hj_PowerPlantClick>().InitPowerPlant();
+        GameObject.Find("hj_renewable_btn").GetComponent<hj_PowerPlantClick>().InitPowerPlant();
     }
 
     // Update is called once per frame
@@ -30,7 +30,7 @@ public class ObjectClick_copy : MonoBehaviour
                     string a = hit.transform.name;
                     try
                     {
-                        if (a == "renewable_btn" || a == "coal_btn" || a == "nuclear_btn")
+                        if (a == "hj_renewable_btn" || a == "hj_coal_btn" || a == "hj_nuclear_btn")
                         {
                             GameObject.Find(a).GetComponent<hj_PowerPlantClick>().clickPowerPlantButton(a);
                         }else if (a== "hj_america_btn" || a == "hj_eu_btn")
