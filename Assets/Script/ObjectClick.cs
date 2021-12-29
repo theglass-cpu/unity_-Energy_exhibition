@@ -12,7 +12,11 @@ public class ObjectClick : MonoBehaviour
 
     void Start()
     {
-        GameObject.Find("renewable_btn").GetComponent<hj_PowerPlantClick>().InitPowerPlant();//hojae
+        try {
+            GameObject.Find("hj_renewable_btn").GetComponent<hj_PowerPlantClick>().InitPowerPlant();//hojae
+
+        }
+        catch (Exception ex) { }
 
     }
 
