@@ -12,7 +12,8 @@ public class ObjectClick : MonoBehaviour
 
     void Start()
     {
-        try {
+        try
+        {
             GameObject.Find("hj_renewable_btn").GetComponent<hj_PowerPlantClick>().InitPowerPlant();//hojae
 
         }
@@ -23,7 +24,7 @@ public class ObjectClick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(point.position);
@@ -47,6 +48,11 @@ public class ObjectClick : MonoBehaviour
                                 break;
 
                             case "sh":
+                                if (a == "sh_click_cube")
+                                {
+                                    GameObject.Find(a).GetComponent<Scene_Jumping>().Jump();
+
+                                }
                                 // Debug.Log("��������");
                                 break;
 
