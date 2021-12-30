@@ -61,6 +61,7 @@ public class ObjectClick : MonoBehaviour
 
                             case "hj":
                                 // Debug.Log("ȣ������");
+                                Debug.Log(a);
                                 if (a == "hj_renewable_btn" || a == "hj_coal_btn" || a == "hj_nuclear_btn")
                                 {
                                     GameObject.Find(a).GetComponent<hj_PowerPlantClick>().clickPowerPlantButton(a);
