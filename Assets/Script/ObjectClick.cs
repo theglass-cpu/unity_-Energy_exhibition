@@ -48,6 +48,11 @@ public class ObjectClick : MonoBehaviour
                                 break;
 
                             case "sh":
+                                if (a == "sh_click_cube")
+                                {
+                                    GameObject.Find(a).GetComponent<Scene_Jumping>().Jump();
+
+                                }
                                 // Debug.Log("��������");
                                 break;
 
