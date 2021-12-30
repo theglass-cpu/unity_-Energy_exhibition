@@ -50,9 +50,9 @@ public class ObjectClick : MonoBehaviour
                                 break;
 
                             case "sh":
-                                if (a == "sh_click_cube")
+                                if (a == "sh_start")
                                 {
-                                 //   GameObject.Find(a).GetComponent<Scene_Jumping>().Jump();
+                                    GameObject.Find(a).GetComponent<Video>().play_video();
 
                                 }
                                 // Debug.Log("��������");
