@@ -20,4 +20,9 @@ public class Scene_Jumping : MonoBehaviour
         SceneManager.LoadScene("Miniature_scene");
 
     }
+    public void Jump_ex()
+    {
+        SceneManager.LoadScene("main_scene");
+
+    }
 }
