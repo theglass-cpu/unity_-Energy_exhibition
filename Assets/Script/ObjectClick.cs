@@ -24,6 +24,8 @@ public class ObjectClick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
+
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
@@ -48,12 +50,18 @@ public class ObjectClick : MonoBehaviour
                                 break;
 
                             case "sh":
+                                if (a == "sh_start")
+                                {
+                                    GameObject.Find(a).GetComponent<Video>().play_video();
+
+                                }
                                 // Debug.Log("��������");
                                 break;
 
 
                             case "hj":
                                 // Debug.Log("ȣ������");
+                                Debug.Log(a);
                                 if (a == "hj_renewable_btn" || a == "hj_coal_btn" || a == "hj_nuclear_btn")
                                 {
                                     GameObject.Find(a).GetComponent<hj_PowerPlantClick>().clickPowerPlantButton(a);

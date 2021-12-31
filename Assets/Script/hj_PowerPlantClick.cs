@@ -8,6 +8,7 @@ public class hj_PowerPlantClick : MonoBehaviour
 
 
     public void clickPowerPlantButton (string obj_name){
+        Debug.Log(obj_name);
         switch (obj_name)
         {
             case "hj_renewable_btn":
