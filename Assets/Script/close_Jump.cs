@@ -30,7 +30,7 @@ public class close_Jump : MonoBehaviour
         }
 
 
-        print("다른 사람과의 거리: " + distance);
+        //print("다른 사람과의 거리: " + distance);
 
     }
 }
