@@ -35,7 +35,6 @@ public class close_Jump : MonoBehaviour
             }
         }
 
-<<<<<<< HEAD
         if (name == "jy")
         {
             if (distance < 50f)
@@ -44,12 +43,16 @@ public class close_Jump : MonoBehaviour
 
             }
         }
+        if (name == "yr")
+        {
+            if (distance < 50f)
+            {
+                SceneManager.LoadScene("yr_scene");
+
+            }
+        }
 
 
-
-=======
-        //print("다른 사람과의 거리: " + distance);
->>>>>>> ce271b7e3280f676bedbf6a36afbe71bc123235e
 
     }
 }
