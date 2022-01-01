@@ -11,7 +11,7 @@ public class close_Jump : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -19,22 +19,33 @@ public class close_Jump : MonoBehaviour
     {
         room_jump();
     }
-    public void room_jump() {
-       
+    public void room_jump()
+    {
 
-       
+
+
         float distance = Vector3.Distance(other.position, transform.position);
 
         if (name == "hj")
         {
-        if (distance < 50f)
-        {
+            if (distance < 50f)
+            {
                 SceneManager.LoadScene("hy_scene2");
 
             }
         }
 
-        print("다른 사람과의 거리: " + distance);
+        if (name == "jy")
+        {
+            if (distance < 50f)
+            {
+                SceneManager.LoadScene("jy_scene");
+
+            }
+        }
+
+
+
 
     }
 }
