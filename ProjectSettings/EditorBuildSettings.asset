@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/miniature_scene.unity
     guid: c242ff821a48649e18695e351b18713b
+  - enabled: 1
+    path: Assets/Scenes/sh_scene.unity
+    guid: 0a4e1887e947e9d4b8e9a377047c17e7
+  - enabled: 1
+    path: Assets/Scenes/miniature_room.unity
+    guid: 98f80e10e36bc80428a9744955b997d1
   m_configObjects: {}
