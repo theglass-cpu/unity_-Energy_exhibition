@@ -191,7 +191,7 @@ public class bar_action : MonoBehaviour
 
         //  JToken jToken = jObject["ENERGY"]; ;
 
-        Debug.Log( "로그"+array[0].ToString());
+        //Debug.Log( "로그"+array[0].ToString());
 
         Debug.Log(www.text);
 
