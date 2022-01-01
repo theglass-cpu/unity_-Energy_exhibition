@@ -26,7 +26,25 @@ public class close_Jump : MonoBehaviour
 
         float distance = Vector3.Distance(other.position, transform.position);
 
-        if (name == "hj")
+       
+
+        if (name == "jy")
+        {
+            if (distance < 50f)
+            {
+                SceneManager.LoadScene("yr_scene");
+                
+            }
+        }
+        if (name == "yr")
+        {
+            if (distance < 50f)
+            {
+                SceneManager.LoadScene("sh_scene");
+
+            }
+        }
+        if (name == "sh")
         {
             if (distance < 50f)
             {
@@ -35,23 +53,14 @@ public class close_Jump : MonoBehaviour
             }
         }
 
-        if (name == "jy")
+        if (name == "hj")
         {
             if (distance < 50f)
             {
-                SceneManager.LoadScene("jy_scene");
+                SceneManager.LoadScene("miniature_room");
 
             }
         }
-        if (name == "yr")
-        {
-            if (distance < 50f)
-            {
-                SceneManager.LoadScene("yr_scene");
-
-            }
-        }
-
 
 
     }
