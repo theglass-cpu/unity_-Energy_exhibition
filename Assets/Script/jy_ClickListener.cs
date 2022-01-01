@@ -158,16 +158,17 @@ public class jy_ClickListener : MonoBehaviour
         }
         else if (objectName.Equals("jy_btn_before"))
         {
-            if(before)
+            if (before)
             {
                 arrow.SetActive(false);
                 before = false;
-            } else
+            }
+            else
             {
                 arrow.SetActive(true);
                 before = true;
             }
-            
+
         }
         else if (objectName.Equals("jy_btn_safe"))
         {
@@ -175,12 +176,13 @@ public class jy_ClickListener : MonoBehaviour
             {
                 arrow.SetActive(false);
                 safe = false;
-            } else
+            }
+            else
             {
                 arrow.SetActive(true);
                 safe = true;
             }
-            
+
         }
         else if (objectName.Equals("jy_btn_10ago"))
         {
@@ -188,25 +190,168 @@ public class jy_ClickListener : MonoBehaviour
             {
                 arrow.SetActive(false);
                 ago10 = false;
-            } else
+            }
+            else
             {
                 arrow.SetActive(true);
                 ago10 = true;
             }
-                   
+
         }
         else if (objectName.Equals("jy_btn_dangerous"))
         {
-            if(dangerous)
+            if (dangerous)
             {
                 arrow.SetActive(false);
                 dangerous = false;
-            } else
+            }
+            else
             {
                 arrow.SetActive(true);
                 dangerous = true;
             }
-            
+
+        }
+        else if (objectName.Equals("jy_btn19"))
+        {
+            country.GetComponent<TextMesh>().text = "속초";
+            content.GetComponent<TextMesh>().text =
+                "- 6월 최고기온 26.4도(최고 1위)\n" +
+                "- 10월 강수량 0.0mm(최소 1위)";
+        }
+        else if (objectName.Equals("jy_btn20"))
+        {
+            country.GetComponent<TextMesh>().text = "대관령";
+            content.GetComponent<TextMesh>().text =
+                "- 1.23 : 일 최고기온 9.3도(최고 1위)\n" +
+                "- 3.26 : 일 최고기온 20.5도(최고 1위)\n";
+        }
+        else if (objectName.Equals("jy_btn21"))
+        {
+            country.GetComponent<TextMesh>().text = "강릉";
+            content.GetComponent<TextMesh>().text =
+                "- 6월 최고기온 26.5도(최고 1위)\n" +
+                "- 11.19 : 일 최고기온 24.7도(최고 1위)\n" +
+                "- 9.7 : 일 강수량 206.5mm(최다 1위)";
+        }
+        else if (objectName.Equals("jy_btn22"))
+        {
+            country.GetComponent<TextMesh>().text = "철원";
+            content.GetComponent<TextMesh>().text =
+                "- 1.26 : 일 최고기온 11도(최고 1위)";
+        }
+        else if (objectName.Equals("jy_btn23"))
+        {
+            country.GetComponent<TextMesh>().text = "서울";
+            content.GetComponent<TextMesh>().text =
+                "- 4.22 : 마지막 봄눈(늦은 순위 1위)\n" +
+                "- 10월 강수량 0.0mm(최소 1위)\n" +
+                "11.19 : 일 강수량 86.9mm(최다 1위)";
+        }
+        else if (objectName.Equals("jy_btn24"))
+        {
+            country.GetComponent<TextMesh>().text = "인천";
+            content.GetComponent<TextMesh>().text =
+                "- 1월 최심적설 없음(최소 1위)\n";
+        }
+        else if (objectName.Equals("jy_btn25"))
+        {
+            country.GetComponent<TextMesh>().text = "충주";
+            content.GetComponent<TextMesh>().text =
+                "- 1.7 : 일 최고기온 13.8도(최고 1위)\n";
+        }
+        else if (objectName.Equals("jy_btn26"))
+        {
+            country.GetComponent<TextMesh>().text = "서산";
+            content.GetComponent<TextMesh>().text =
+                "- 3월 최고기온 12.8도(최고 1위)\n";
+        }
+        else if (objectName.Equals("jy_btn27"))
+        {
+            country.GetComponent<TextMesh>().text = "대전";
+            content.GetComponent<TextMesh>().text =
+                "- 1월 최고기온 7.3도(최고 1위)\n" +
+                "- 10.22 : 수마트라섬, 폭우로 인한 산사태, 11명 사망\n";
+        }
+        else if (objectName.Equals("jy_btn28"))
+        {
+            country.GetComponent<TextMesh>().text = "울진";
+            content.GetComponent<TextMesh>().text =
+                "- 6월 최고기온 25.4도(최고 1위)\n" +
+                "- 7.24 : 일 강수량 179.4mm(최다 1위)\n" +
+                "- 10.2 : 일 강수량 332.9mm(최다 1위)";
+        }
+        else if (objectName.Equals("jy_btn29"))
+        {
+            country.GetComponent<TextMesh>().text = "문경";
+            content.GetComponent<TextMesh>().text =
+                "- 여름철 강수량 1226.0mm(최다 1위)\n";
+        }
+        else if (objectName.Equals("jy_btn30"))
+        {
+            country.GetComponent<TextMesh>().text = "의성";
+            content.GetComponent<TextMesh>().text =
+                "- 1.27 : 일 최저기온 5.4도(최고 1위)\n";
+        }
+        else if (objectName.Equals("jy_btn31"))
+        {
+            country.GetComponent<TextMesh>().text = "포항";
+            content.GetComponent<TextMesh>().text =
+                "- 12월 강수량 0.0mm(최소 1위)\n";
+        }
+        else if (objectName.Equals("jy_btn32"))
+        {
+            country.GetComponent<TextMesh>().text = "대구";
+            content.GetComponent<TextMesh>().text =
+                "- 6월 최고기온 30.5도(최고 1위)\n";
+        }
+        else if (objectName.Equals("jy_btn33"))
+        {
+            country.GetComponent<TextMesh>().text = "장수";
+            content.GetComponent<TextMesh>().text =
+                "- 여름철 강수량 1418.2mm(최다 1위)";
+        }
+        else if (objectName.Equals("jy_btn34"))
+        {
+            country.GetComponent<TextMesh>().text = "순창";
+            content.GetComponent<TextMesh>().text =
+                "- 5.17 : 일 최고기온 15.2도(최저 1위)\n" +
+                "- 여름철 강수량 1562.8mm(최다 1위)\n" +
+                "- 8.8 : 일 강수량 361.3mm(최다 1위)";
+        }
+        else if (objectName.Equals("jy_btn35"))
+        {
+            country.GetComponent<TextMesh>().text = "해남";
+            content.GetComponent<TextMesh>().text =
+                "- 12월 최저기온 -4.9도(최저 1위)\n";
+        }
+        else if (objectName.Equals("jy_btn36"))
+        {
+            country.GetComponent<TextMesh>().text = "양산";
+            content.GetComponent<TextMesh>().text =
+                "- 6월 최고기온 29.7도(최고 1위)\n" +
+                "- 9.7 : 일 강수량 195.5mm(최다 1위)\n" +
+                "- 11.19 : 일 강수량 69.4mm(최다 1위)";
+        }
+        else if (objectName.Equals("jy_btn37"))
+        {
+            country.GetComponent<TextMesh>().text = "부산";
+            content.GetComponent<TextMesh>().text =
+                "- 6월 최고기온 26.6도(최고 1위)\n";
+        }
+        else if (objectName.Equals("jy_btn38"))
+        {
+            country.GetComponent<TextMesh>().text = "산청";
+            content.GetComponent<TextMesh>().text =
+                "- 여름철 강수량 1564.9mm(최다 1위)\n";
+        }
+        else if (objectName.Equals("jy_btn39"))
+        {
+            country.GetComponent<TextMesh>().text = "제주";
+            content.GetComponent<TextMesh>().text =
+                "- 1.7 : 일 최고기온 23.6도(최고 1위)\n" +
+                "- 2.15 : 일 최고기온 20.1도(최고 1위)\n" +
+                "- 11.17 : 일 최고기온 26.7도(최고 1위)";
         }
     }
 }
