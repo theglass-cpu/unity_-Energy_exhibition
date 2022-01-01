@@ -31,13 +31,13 @@ public class api : MonoBehaviour
                 {
                     isOnLoading = false;
                     xmlResult = System.Text.Encoding.UTF8.GetString(www.downloadHandler.data);
-                    XmlDocument xmlDocument = new();
+                    XmlDocument xmlDocument = new XmlDocument();
                     xmlDocument.Load(xmlResult);
 
-                    XmlNode useQty_node = xmlDocument.SelectSingleNode("response/");
+                    XmlNode useQty_node = xmlDocument.SelectSingleNode("response/body/items/item/useQty");
+                    string userQty = useQty_node.InnerText;
 
-
-
+                    Debug.Log(userQty);
 
                 }
             }
