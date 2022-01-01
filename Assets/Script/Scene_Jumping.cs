@@ -22,7 +22,7 @@ public class Scene_Jumping : MonoBehaviour
     }
     public void Jump_ex()
     {
-        SceneManager.LoadScene("main_scene");
+        SceneManager.LoadScene("miniature_room");
 
     }
 }
