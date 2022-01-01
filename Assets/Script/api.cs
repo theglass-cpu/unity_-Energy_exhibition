@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using System.Xml;
+using System.Text.RegularExpressions;
+
 public class api : MonoBehaviour
 {
     string xmlResult;
@@ -31,10 +33,10 @@ public class api : MonoBehaviour
                 {
                     isOnLoading = false;
                     xmlResult = System.Text.Encoding.UTF8.GetString(www.downloadHandler.data);
-                    XmlDocument xmlDocument = new XmlDocument();
-                    xmlDocument.Load(xmlResult);
-
-                    XmlNode useQty_node = xmlDocument.SelectSingleNode("response/body/items/item/useQty");
+                    xmlResult = Regex.Replace(xmlResult, "<?xml version=\"+1.0\" encoding=\"UTF - 8\" standalone=\"yes\"?>", string.Empty);
+                    XmlDocument XD = new XmlDocument();
+                    XD.Load(xmlResult);
+                    XmlNode useQty_node = XD.SelectSingleNode("response/body/items/item/useQty");
                     string userQty = useQty_node.InnerText;
 
                     Debug.Log(userQty);
