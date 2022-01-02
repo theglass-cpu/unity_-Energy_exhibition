@@ -33,27 +33,27 @@ public class getHJD : MonoBehaviour
     {
         switch (bjd)
         {
-            case "À»Áö·Î1°¡":
+            case "ì„ì§€ë¡œ1ê°€":
                 return 10400;
-            case "À»Áö·Î2°¡":
+            case "ì„ì§€ë¡œ2ê°€":
                 return 10500;
-            case "¼öÇÏµ¿":
+            case "ìˆ˜í•˜ë™":
                 return 10800;
-            case "´Ùµ¿":
+            case "ë‹¤ë™":
                 return 10200;
-            case "Àúµ¿1°¡":
+            case "ì €ë™1ê°€":
                 return 13100;
-            case "Àúµ¿2°¡":
+            case "ì €ë™2ê°€":
                 return 16100;
-            case "¸íµ¿1°¡":
+            case "ëª…ë™1ê°€":
                 return 12600;
-            case "³²´ë¹®·Î2°¡":
+            case "ë‚¨ëŒ€ë¬¸ë¡œ2ê°€":
                 return 11500;
-            case "¼Ò°øµ¿":
+            case "ì†Œê³µë™":
                 return 11100;
-            case "¼öÇ¥µ¿":
+            case "ìˆ˜í‘œë™":
                 return 11000;
-            case "Àå±³µ¿":
+            case "ì¥êµë™":
                 return 10900;
             default: return 0;
         }
