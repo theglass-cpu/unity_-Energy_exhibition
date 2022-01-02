@@ -3565,7 +3565,7 @@ GameObject:
   - component: {fileID: 113877827}
   - component: {fileID: 113877826}
   m_Layer: 0
-  m_Name: "\uC11C\uC6B8\uD2B9\uBCC4\uC2DC \uC911\uAD6C \uB2E4\uB3D9 141"
+  m_Name: "\uC11C\uC6B8\uD2B9\uBCC4\uC2DC \uC911\uAD6C \uB2E4\uB3D9 138"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11255,6 +11255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 335266845}
+  - component: {fileID: 335266846}
   m_Layer: 0
   m_Name: cover
   m_TagString: Untagged
@@ -11362,6 +11363,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &335266846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335266844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a117c7795384d44baf7b8d0e9a386e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &343367173
 GameObject:
   m_ObjectHideFlags: 0
