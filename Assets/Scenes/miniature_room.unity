@@ -35788,7 +35788,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0606c2dc1482d432784377144f136388, type: 2}
+  - {fileID: 2100000, guid: 6251a3edb7a7328458fe32b87c936070, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -61074,7 +61074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   other: {fileID: 1784731251}
-  name: 
+  name: video
 --- !u!65 &1822796994
 BoxCollider:
   m_ObjectHideFlags: 0
