@@ -10,12 +10,12 @@ public class call_child : MonoBehaviour
     // Start is called before the first frame update
 
 
-    float allQty =0f;//Àü·Â»ç¿ë·® ÀüÃ¼ÇÕ
-    float averageQty =0f;//Æò±Õ Àü·Â»ç¿ë·®
-    float topQty = 0f;// ÃÖ´ë °Ç¹°Àü·Â»ç¿ë·®
-    float UseQty_f =0f; //°Ç¹°Àü·Â»ç¿ë·® floatÇü
+    float allQty = 0f;//ï¿½ï¿½ï¿½Â»ï¿½ë·® ï¿½ï¿½Ã¼ï¿½ï¿½
+    float averageQty = 0f;//ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â»ï¿½ë·®
+    float topQty = 0f;// ï¿½Ö´ï¿½ ï¿½Ç¹ï¿½ï¿½ï¿½ï¿½Â»ï¿½ë·®
+    float UseQty_f = 0f; //ï¿½Ç¹ï¿½ï¿½ï¿½ï¿½Â»ï¿½ë·® floatï¿½ï¿½
 
-    float div =200000f;//°Ç¹° ÃÖ´ë Àü·Â»ç¿ë·® 8³ª´«°ª
+    float div = 200000f;//ï¿½Ç¹ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½Â»ï¿½ë·® 8ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     public Material mat7;
     public Material mat6;
     public Material mat5;
@@ -35,7 +35,7 @@ public class call_child : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
 
-            //Æò±Õ°ª ±¸ÇÏ±â ¹Ýº¹¹®
+            //ï¿½ï¿½Õ°ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½Ýºï¿½ï¿½ï¿½
             string adress = transform.GetChild(i).name;
 
             string UseQty = getUseQty(adress);
@@ -45,9 +45,10 @@ public class call_child : MonoBehaviour
                 UseQty_f = float.Parse(UseQty);
             }
 
-            
 
-            if (topQty < UseQty_f) {
+
+            if (topQty < UseQty_f)
+            {
                 topQty = UseQty_f;
             }
 
@@ -57,9 +58,9 @@ public class call_child : MonoBehaviour
 
 
         }
-       // div = topQty / 8;
-        
-        
+        // div = topQty / 8;
+
+
 
         for (int i = 0; i < count; i++)
         {
@@ -69,11 +70,11 @@ public class call_child : MonoBehaviour
             string UseQty = getUseQty(adress);
             if (UseQty != null && UseQty != "")
             {
-                UseQty_f = float.Parse(UseQty);//string À» float À¸·Î º¯È¯
+                UseQty_f = float.Parse(UseQty);//string ï¿½ï¿½ float ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
             }
 
-            //ÀÌ¸§¿¡ µû¶ó Àü·Â»ç¿ë·® ¹Þ¾Æ¿È
-            Debug.Log("ÁÖ¼Ò :"+adress+"  Àü±â »ç¿ë·® :"+ UseQty);
+            //ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â»ï¿½ë·® ï¿½Þ¾Æ¿ï¿½
+            Debug.Log("ï¿½Ö¼ï¿½ :" + adress + "  ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ë·® :" + UseQty);
 
 
 
@@ -81,30 +82,31 @@ public class call_child : MonoBehaviour
 
 
         }
-      
-        //Àü·Â»ç¿ë·® ±âÁØ¿¡ µû¶ó »ö ÀÔÈ÷±â
+
+        //ï¿½ï¿½ï¿½Â»ï¿½ë·® ï¿½ï¿½ï¿½Ø¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     }
 
     void setColor(GameObject gameobj, float useQty)
     {
 
-        if (div== null)
+        if (div == null)
         {
             return;
         }
-        //averageQty Æò±Õ Àü·Â»ç¿ë·®
-        //useQty °Ç¹° Àü·Â»ç¿ë·®
+        //averageQty ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â»ï¿½ë·®
+        //useQty ï¿½Ç¹ï¿½ ï¿½ï¿½ï¿½Â»ï¿½ë·®
         //Material material =Materi ;
-       // Material material = MaterialPropertyBlock.ReferenceEquals(, gameobj.GetComponent<Material>());
+        // Material material = MaterialPropertyBlock.ReferenceEquals(, gameobj.GetComponent<Material>());
 
 
         if (useQty > div * 7)
         {
             gameobj.GetComponent<Renderer>().material = mat7;
 
-        }else
-        
-        if(  useQty > div * 6)
+        }
+        else
+
+        if (useQty > div * 6)
         {
             gameobj.GetComponent<Renderer>().material = mat6;
 
@@ -168,7 +170,8 @@ public class call_child : MonoBehaviour
         {
             ji = bunjicode[1];
         }
-        else {
+        else
+        {
             ji = "";
         }
 
@@ -179,7 +182,7 @@ public class call_child : MonoBehaviour
         Debug.Log(GetDataUrl);
         XmlDocument xml = new XmlDocument();
         xml.Load(GetDataUrl);
-        XmlNodeList xnList = xml.GetElementsByTagName("item"); //Á¢±ÙÇÒ ³ëµå
+        XmlNodeList xnList = xml.GetElementsByTagName("item"); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
         foreach (XmlNode xn in xnList)
         {
             string useQty = xn["useQty"].InnerText;
@@ -193,27 +196,27 @@ public class call_child : MonoBehaviour
     {
         switch (bjd)
         {
-            case "À»Áö·Î1°¡":
+            case "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½":
                 return 10400;
-            case "À»Áö·Î2°¡":
+            case "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½2ï¿½ï¿½":
                 return 10500;
-            case "¼öÇÏµ¿":
+            case "ï¿½ï¿½ï¿½Ïµï¿½":
                 return 10800;
-            case "´Ùµ¿":
+            case "ï¿½Ùµï¿½":
                 return 10200;
-            case "Àúµ¿1°¡":
+            case "ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½":
                 return 13100;
-            case "Àúµ¿2°¡":
+            case "ï¿½ï¿½ï¿½ï¿½2ï¿½ï¿½":
                 return 16100;
-            case "¸íµ¿1°¡":
+            case "ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½":
                 return 12600;
-            case "³²´ë¹®·Î2°¡":
+            case "ï¿½ï¿½ï¿½ë¹®ï¿½ï¿½2ï¿½ï¿½":
                 return 11500;
-            case "¼Ò°øµ¿":
+            case "ï¿½Ò°ï¿½ï¿½ï¿½":
                 return 11100;
-            case "¼öÇ¥µ¿":
+            case "ï¿½ï¿½Ç¥ï¿½ï¿½":
                 return 11000;
-            case "Àå±³µ¿":
+            case "ï¿½å±³ï¿½ï¿½":
                 return 10900;
             default: return 0;
         }
