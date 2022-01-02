@@ -196,27 +196,27 @@ public class call_child : MonoBehaviour
     {
         switch (bjd)
         {
-            case "������1��":
+            case "을지로1가":
                 return 10400;
-            case "������2��":
+            case "을지로2가":
                 return 10500;
-            case "���ϵ�":
+            case "수하동":
                 return 10800;
-            case "�ٵ�":
+            case "다동":
                 return 10200;
-            case "����1��":
+            case "저동1가":
                 return 13100;
-            case "����2��":
+            case "저동2가":
                 return 16100;
-            case "����1��":
+            case "명동1가":
                 return 12600;
-            case "���빮��2��":
+            case "남대문로2가":
                 return 11500;
-            case "�Ұ���":
+            case "소공동":
                 return 11100;
-            case "��ǥ��":
+            case "수표동":
                 return 11000;
-            case "�屳��":
+            case "장교동":
                 return 10900;
             default: return 0;
         }
