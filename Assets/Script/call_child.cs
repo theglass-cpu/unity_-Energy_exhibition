@@ -8,9 +8,42 @@ using System.Text.RegularExpressions;
 public class call_child : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    Material mat;
+
+    float allQty =0f;//전력사용량 전체합
+    float averageQty =0f;//평균 전력사용량
+    float topQty = 0f;// 최대 건물전력사용량
+    float UseQty_f =0f; //건물전력사용량 float형
+
+    float div =0f;//건물 최대 전력사용량 8나눈값
     void Start()
     {
+        mat = GetComponent<Material>();
         GameObject game;
+        for (int i = 0; i < 19; i++)
+        {
+
+            //평균값 구하기 반복문
+            string adress = transform.GetChild(i).name;
+
+            string UseQty = getUseQty(adress);
+
+            UseQty_f = float.Parse(UseQty);
+
+            if (topQty < UseQty_f) {
+                topQty = UseQty_f;
+            }
+
+            allQty = allQty + UseQty_f;
+
+            averageQty = allQty / 19;
+
+
+        }
+        float div = topQty / 8;
+        
+        
 
         int count = transform.childCount;
         for (int i = 0; i < 19; i++)
@@ -18,17 +51,74 @@ public class call_child : MonoBehaviour
 
             string adress = transform.GetChild(i).name;
             game = GameObject.Find(adress);
-
+            string UseQty = getUseQty(adress);
+            UseQty_f = float.Parse(UseQty);//string 을 float 으로 변환
             //이름에 따라 전력사용량 받아옴
-            Debug.Log("주소 :"+adress+"  전기 사용량 :"+getUseQty(adress));
+            Debug.Log("주소 :"+adress+"  전기 사용량 :"+ UseQty);
 
-            //전력사용량 기준에 따라 색 입히기
-            setColor(game, 10f);
+
+
+            setColor(game, UseQty_f);
+
+
         }
+      
+        //전력사용량 기준에 따라 색 입히기
     }
 
     void setColor(GameObject gameobj, float useQty)
     {
+
+        if (div == null)
+        {
+            return;
+        }
+        //averageQty 평균 전력사용량
+        //useQty 건물 전력사용량
+        //Material material =Materi ;
+        gameobj.GetComponent<Renderer>().material.color = Color.green;
+
+        if (useQty > div * 7)
+        {
+
+        }else
+        if (useQty > div * 6)
+        {
+
+        }else
+        if (useQty > div * 5)
+        {
+
+        }else
+        if (useQty > div * 4)
+        {
+
+        }else
+        if (useQty > div * 3)
+        {
+
+        }else
+        if (useQty > div * 2)
+        {
+
+        }else
+        if (useQty > div)
+        {
+
+        }
+       
+       
+    
+   
+        
+      
+       
+      
+    
+   
+    
+        
+        
 
     }
 
