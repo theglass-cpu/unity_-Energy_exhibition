@@ -11381,6 +11381,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a117c7795384d44baf7b8d0e9a386e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mat7: {fileID: 2100000, guid: 781e5bf1cba30204c88a894d937eb500, type: 2}
+  mat6: {fileID: 2100000, guid: 5fc0603ba70f9844d8cb7048149c5050, type: 2}
+  mat5: {fileID: 2100000, guid: b50275cd29dfd7640b53249b060efd3e, type: 2}
+  mat4: {fileID: 2100000, guid: 2a84c84b17d583d429d3453a88efbbbd, type: 2}
+  mat3: {fileID: 2100000, guid: 8d482d8c1bf0ce14888b69586a29fb85, type: 2}
+  mat2: {fileID: 2100000, guid: ddbd494ffe9df9e49a0d7fbcc76b2911, type: 2}
+  mat1: {fileID: 2100000, guid: 37835719258feba4c913cf05ac722661, type: 2}
 --- !u!1 &343367173
 GameObject:
   m_ObjectHideFlags: 0
@@ -59506,7 +59513,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846101052}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.25, z: 0}
+  m_LocalPosition: {x: 0.25, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1372695894}

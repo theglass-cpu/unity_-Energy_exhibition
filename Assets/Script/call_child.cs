@@ -9,19 +9,30 @@ public class call_child : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    Material mat;
 
     float allQty =0f;//전력사용량 전체합
     float averageQty =0f;//평균 전력사용량
     float topQty = 0f;// 최대 건물전력사용량
     float UseQty_f =0f; //건물전력사용량 float형
 
-    float div =0f;//건물 최대 전력사용량 8나눈값
+    float div =200000f;//건물 최대 전력사용량 8나눈값
+    public Material mat7;
+    public Material mat6;
+    public Material mat5;
+    public Material mat4;
+    public Material mat3;
+    public Material mat2;
+    public Material mat1;
+
+
     void Start()
     {
-        mat = GetComponent<Material>();
+
+        int count = transform.childCount;
+
+        //mat = GetComponent<Material>();
         GameObject game;
-        for (int i = 0; i < 19; i++)
+        for (int i = 0; i < count; i++)
         {
 
             //평균값 구하기 반복문
@@ -29,7 +40,12 @@ public class call_child : MonoBehaviour
 
             string UseQty = getUseQty(adress);
 
-            UseQty_f = float.Parse(UseQty);
+            if (UseQty != null && UseQty != "")
+            {
+                UseQty_f = float.Parse(UseQty);
+            }
+
+            
 
             if (topQty < UseQty_f) {
                 topQty = UseQty_f;
@@ -41,18 +57,21 @@ public class call_child : MonoBehaviour
 
 
         }
-        float div = topQty / 8;
+       // div = topQty / 8;
         
         
 
-        int count = transform.childCount;
-        for (int i = 0; i < 19; i++)
+        for (int i = 0; i < count; i++)
         {
 
             string adress = transform.GetChild(i).name;
             game = GameObject.Find(adress);
             string UseQty = getUseQty(adress);
-            UseQty_f = float.Parse(UseQty);//string 을 float 으로 변환
+            if (UseQty != null && UseQty != "")
+            {
+                UseQty_f = float.Parse(UseQty);//string 을 float 으로 변환
+            }
+
             //이름에 따라 전력사용량 받아옴
             Debug.Log("주소 :"+adress+"  전기 사용량 :"+ UseQty);
 
@@ -69,56 +88,70 @@ public class call_child : MonoBehaviour
     void setColor(GameObject gameobj, float useQty)
     {
 
-        if (div == null)
+        if (div== null)
         {
             return;
         }
         //averageQty 평균 전력사용량
         //useQty 건물 전력사용량
         //Material material =Materi ;
-        gameobj.GetComponent<Renderer>().material.color = Color.green;
+       // Material material = MaterialPropertyBlock.ReferenceEquals(, gameobj.GetComponent<Material>());
+
 
         if (useQty > div * 7)
         {
+            gameobj.GetComponent<Renderer>().material = mat7;
 
         }else
-        if (useQty > div * 6)
+        
+        if(  useQty > div * 6)
         {
-
-        }else
-        if (useQty > div * 5)
-        {
-
-        }else
-        if (useQty > div * 4)
-        {
-
-        }else
-        if (useQty > div * 3)
-        {
-
-        }else
-        if (useQty > div * 2)
-        {
-
-        }else
-        if (useQty > div)
-        {
+            gameobj.GetComponent<Renderer>().material = mat6;
 
         }
-       
-       
-    
-   
-        
-      
-       
-      
-    
-   
-    
-        
-        
+        else
+        if (useQty > div * 5)
+        {
+            gameobj.GetComponent<Renderer>().material = mat5;
+
+        }
+        else
+        if (useQty > div * 4)
+        {
+            gameobj.GetComponent<Renderer>().material = mat4;
+
+        }
+        else
+        if (useQty > div * 3)
+        {
+            gameobj.GetComponent<Renderer>().material = mat3;
+
+        }
+        else
+        if (useQty > div * 2)
+        {
+            gameobj.GetComponent<Renderer>().material = mat2;
+
+        }
+        else
+        if (useQty > div)
+        {
+            gameobj.GetComponent<Renderer>().material = mat1;
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 
@@ -168,6 +201,20 @@ public class call_child : MonoBehaviour
                 return 10800;
             case "다동":
                 return 10200;
+            case "저동1가":
+                return 13100;
+            case "저동2가":
+                return 16100;
+            case "명동1가":
+                return 12600;
+            case "남대문로2가":
+                return 11500;
+            case "소공동":
+                return 11100;
+            case "수표동":
+                return 11000;
+            case "장교동":
+                return 10900;
             default: return 0;
         }
     }
