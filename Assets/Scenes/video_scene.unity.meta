@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Original Wood Textures/Wood Texture 07/Materials.meta
+guid: ec94d1079122e4dd9a79a6fd8975d3be
+folderAsset: yes
+=======
 guid: 00133ba726f8db641819d3ae56dfb996
+>>>>>>> 65c9babe04588caf3bd2f7259b61123a80d0d4db:Assets/Scenes/video_scene.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
