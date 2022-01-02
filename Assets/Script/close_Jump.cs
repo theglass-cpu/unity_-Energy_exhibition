@@ -40,7 +40,7 @@ public class close_Jump : MonoBehaviour
         {
             if (distance < 50f)
             {
-                SceneManager.LoadScene("sh_scene");
+                SceneManager.LoadScene("sh_scene_2");
 
             }
         }
