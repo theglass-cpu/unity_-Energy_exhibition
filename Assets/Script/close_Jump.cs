@@ -61,6 +61,14 @@ public class close_Jump : MonoBehaviour
 
             }
         }
+        if (name == "video")
+        {
+            if (distance < 50f)
+            {
+                SceneManager.LoadScene("video_scene");
+
+            }
+        }
 
 
     }

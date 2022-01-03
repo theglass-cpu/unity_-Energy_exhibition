@@ -74,7 +74,7 @@ public class call_child : MonoBehaviour
             }
 
             //�̸��� ���� ���»�뷮 �޾ƿ�
-            Debug.Log("�ּ� :" + adress + "  ���� ��뷮 :" + UseQty);
+            Debug.Log("주소 :" + adress + "  사용량 :" + UseQty);
 
 
 

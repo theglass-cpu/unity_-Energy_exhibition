@@ -35788,7 +35788,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0606c2dc1482d432784377144f136388, type: 2}
+  - {fileID: 2100000, guid: 6251a3edb7a7328458fe32b87c936070, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -61074,7 +61074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   other: {fileID: 1784731251}
-  name: 
+  name: video
 --- !u!65 &1822796994
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61145,7 +61145,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822796992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 154, y: 105, z: 803}
+  m_LocalPosition: {x: 154, y: 100, z: 803}
   m_LocalScale: {x: 90, y: 200, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
