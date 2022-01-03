@@ -40,6 +40,7 @@ public class close_Jump : MonoBehaviour
         {
             if (distance < 50f)
             {
+                Debug.Log("유리 에서 상훈으로");
                 SceneManager.LoadScene("sh_scene_2");
 
             }
