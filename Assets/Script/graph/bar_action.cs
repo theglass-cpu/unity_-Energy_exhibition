@@ -38,7 +38,7 @@ public class bar_action : MonoBehaviour
     //string nation_name = "°¡³ª";
     int[] array = new int[] { 10,45,15,15,0,10};
 
-    string URL = "http://13.209.66.177/ENERGY/Energy_Statistic_Select.php";
+    string URL = "http://15.164.50.211/ENERGY/Energy_Statistic_Select.php";
 
     int use_energy = 0;
     void Start()

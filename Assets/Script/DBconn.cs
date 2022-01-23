@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 public class DBconn : MonoBehaviour
 {
 
-    string LoginURL = "http://13.209.66.177/ENERGY/Select.php";
+    string LoginURL = "http://15.164.50.211/ENERGY/Select.php";
 
     // Start is called before the first frame update
     void Start()
